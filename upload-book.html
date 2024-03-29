@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> Books Store </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+ <!-- Bootstrap -->
+ <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Slick slider -->
+ <link href="assets/css/slick.css" rel="stylesheet">
+ <!-- Theme color -->
+ <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+<script> src="path_to_sweetalert/sweetalert.min.js"</script> 
+ <link rel="stylesheet" href="path_to_sweetalert/sweetalert.css">
+<!-- Include CKEditor script -->
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+     <!-- header section strats -->
+     <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Books Store
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="featured-books.html">featured Books</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book-overview.html"> Books Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+  <section class="upload-book">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-8" >
+                <div class="form-container">
+                    <h2 class="text-center mb-4">Upload your book and share your <br>story with the world</h2>
+                    <form id="bookForm" action="#" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <input type="file" class="form-control1" name="image" id="image" accept="image/*" style="margin-bottom: 1%;">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="title" placeholder="Enter the Book Title">
+                        </div>
+                        <div class="mb-3" style="margin-bottom: 2%; border-radius: 15px; ">
+                            <textarea class="form-control " name="description" rows="3" placeholder="Provide a Brief Description" id="editor"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" name="price" placeholder="Set the Book Price">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" id="submit-button">Add Book</button>
+                        </div>
+                    </form>
+                    <a href="#featuredBooks" id="successLink" style="display: none;">Book added successfully! View it here.</a>
+                </div>
+            </div>
+          
+            <div class="col-md-4 mb-3 ">
+              <img src="images/updd.upd.png" class="img-fluid" alt="Image" style="width: 100%; height: 120%; padding-bottom:15%; margin-top: 7%; ">
+          </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  JOEY@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras. Lorem ipsum dolor sit amet, consect adipis elit .
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="active" href="index.html">
+                Home
+              </a>
+              <a class="" href="featured-books.html">
+                featured-books
+              </a>
+              <a class="" href="book-overview.html">
+                Books-Overview
+              </a>
+              <a class="" href="login.html">
+               Login
+              </a>
+             
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Subscribe
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+// Function to render books in index.html
+function renderBooks(booksData) {
+  let bookContainer = document.getElementById('featuredBooks');
+  booksData.forEach(bookData => {
+    let bookElement = document.createElement('div');
+    bookElement.classList.add('book-card1');
+    bookElement.innerHTML = `
+      <img src="${bookData.imageUrl}" class="card-img-top" alt="${bookData.title}">
+      <div class="card-body1">
+        <h5 class="card-title">${bookData.title}</h5>
+        <p class="card-text1">${bookData.description}</p>
+        <p class="card-text">Price: ${bookData.price}</p>
+      </div>
+    `;
+    bookContainer.appendChild(bookElement);
+  });
+}
+
+// Fetch newly added books from local storage and render them
+let newBooksData = JSON.parse(localStorage.getItem('newBooks')) || [];
+renderBooks(newBooksData);
+
+// Clear image from local storage on refresh
+localStorage.removeItem('newBooks');
+});
+
+// upload-book.html
+document.addEventListener("DOMContentLoaded", function() {
+  let form = document.getElementById('bookForm');
+  let imageInput = document.getElementById('image');
+
+  form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let formData = new FormData(form);
+      let imageFile = imageInput.files[0];
+
+      let reader = new FileReader();
+      reader.onload = function(event) {
+          formData.append('imageUrl', event.target.result);
+          submitForm(formData);
+      };
+      reader.readAsDataURL(imageFile);
+  });
+
+  function submitForm(formData) {
+      fetch('http://localhost:3000/books', {
+              method: 'POST',
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(Object.fromEntries(formData))
+          })
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Failed to add book');
+              }
+              return response.json();
+          })
+          .then(result => {
+              console.log("Response:", result);
+              // Save the book data to local storage as an array of books
+              let existingBooks = JSON.parse(localStorage.getItem('newBooks')) || [];
+              existingBooks.push(result);
+              localStorage.setItem('newBooks', JSON.stringify(existingBooks));
+              // Show success message using SweetAlert with a link to index.html
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Book added successfully!',
+                  html: 'The book has been successfully added. You will be redirected to the <b>Home page</b>.',
+                  timer: 2000, // Set a timer to automatically close the SweetAlert after 2 seconds
+                  timerProgressBar: true, 
+                  didOpen: () => {
+                      // Add redirection logic here
+                      const url = 'index.html';
+                      const timer = setInterval(() => {
+                          window.location.href = url;
+                      }, 2000); // Redirect after 2 seconds
+                      // Clear the interval when the SweetAlert is closed
+                      Swal.getTimerLeft().then((time) => {
+                          clearInterval(timer);
+                      });
+                  }
+              });
+              form.reset();
+          })
+          .catch(error => {
+              console.error('Error:', error);
+              alert('Failed to add book');
+          });
+  }
+});
+
+
+
+// Validation
+document.addEventListener("DOMContentLoaded", function () {
+const form = document.getElementById("bookForm");
+let formSubmitted = false;
+let alertShown = false; 
+let errorMessagesShown = {}; 
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  if (formSubmitted) {
+    return false;
+  }
+
+  function showError(input, message) {
+    if (!errorMessagesShown[input.id]) { 
+      const errorDiv = document.createElement("div");
+      errorDiv.className = "error-message";
+      errorDiv.textContent = message;
+      input.parentNode.appendChild(errorDiv);
+      errorMessagesShown[input.id] = true; 
+    }
+  }
+
+  function clearErrors() {
+    const errorMessages = form.querySelectorAll(".error-message");
+    errorMessages.forEach((errorMsg) => {
+      errorMsg.remove();
+    });
+  }
+
+  const imageInput = document.getElementById("image");
+  const imageFile = imageInput.files[0];
+  const validImageTypes = ["image/jpeg", "image/png", "image/gif"];
+  const maxSizeInBytes = 10e6; // 10MB
+
+  if (!imageFile) {
+    showError(imageInput, "Please upload an image file.");
+    return false;
+  }
+
+  if (!validImageTypes.includes(imageFile.type)) {
+    showError(imageInput, "Please upload a valid image file (JPEG, PNG, GIF).");
+    return false;
+  }
+
+  if (imageFile.size > maxSizeInBytes) {
+    showError(imageInput, "Please upload an image file smaller than 10MB.");
+    return false;
+  }
+
+  const titleInput = document.getElementById("title");
+  const titleValue = titleInput.value.trim();
+  if (titleValue === "") {
+    showError(titleInput, "Please enter the book title.");
+    return false;
+  }
+
+  const descriptionInput = document.getElementById("description");
+  const descriptionValue = descriptionInput.value.trim();
+  if (descriptionValue === "") {
+    showError(descriptionInput, "Please enter the book description.");
+    return false;
+  }
+
+  const priceInput = document.getElementById("price");
+  const priceValue = priceInput.value.trim();
+  if (priceValue === "" || isNaN(priceValue)) {
+      showError(priceInput, "Please enter a valid numeric value for the book price (e.g., $10)."); // Add "$" 
+      return false;
+  }
+
+  if (!alertShown) { 
+    alert("Form submitted successfully!");
+    alertShown = true; 
+  }
+  formSubmitted = true;
+  form.submit();
+});
+
+const inputs = form.querySelectorAll('input[type="file"], input[type="text"], input[type="number"], textarea');
+inputs.forEach(input => {
+  input.addEventListener('input', function () {
+    const errorMessage = input.parentNode.querySelector('.error-message');
+    if (errorMessage) {
+      errorMessage.remove();
+      errorMessagesShown[input.id] = false; 
+    }
+  });
+});
+});
+
+  
+  // Initialize CKEditor
+  ClassicEditor
+  .create(document.querySelector('#editor'))
+  .catch(error => {
+    console.error(error);
+  });
+  
+  
+  
+  
+  
+  
+   </script>
+  
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> Copyright 2024 JOEY L.L.C - All Rights Reserved
+        
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+  	  <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- Slick JS -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <!-- Bootstrap -->
+      <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Slick slider -->
+      <script type="text/javascript" src="assets/js/slick.min.js"></script>
+      <!-- Counter js -->
+      <script type="text/javascript" src="assets/js/counter.js"></script>
+      <!-- Ajax contact form  -->
+      <script type="text/javascript" src="assets/js/app.js"></script>
+    
+   
+    
+      <!-- Custom js -->
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  
+</body>
+
+</html>
